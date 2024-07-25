@@ -16,6 +16,7 @@ def hello():
 
 @app.route('/getAllProperties', methods=['GET'])
 def get_all_properties():
+    #TODO: Refactor to business logic layer domain
     properties = mongo.db.properties.find()
     result = []
     for property in properties:
